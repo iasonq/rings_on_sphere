@@ -74,3 +74,6 @@ function ring_ex(x, y, z, axis, del, pos, n)
     end
     return arr
 end
+
+#one final attempt to create rings on a sphere is by 
+#rotating the conditions for creating the ring

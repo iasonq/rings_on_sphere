@@ -39,6 +39,8 @@ end
 #each point [x,y,z] correspond to a point on the sphere
 #designated by θ, φ basically
 
+#rotations for rings initialized around z axis cannot be performed
+
 function rot_ring(ring, w1, w2, n)
     #For rings created around the x-axis / with their center on the x-axis.
     #First we rotate around the x-axis then around the z-axis. 
