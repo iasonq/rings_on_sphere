@@ -21,7 +21,7 @@ z = @. cos.(θ)* ones(n)'
 # Angle for rotation (in radians)
 
 #Select settings for testing purposes
-set = 1
+set = 0
 #r stands for ration. If i have n= 3600 
 #a 25 degree rotation is equivalent to 250 indexes being translated
 r = Int(n/360)
@@ -29,9 +29,8 @@ r = Int(n/360)
 if set == 0
     vals0 = ring_ex(x, y, z, "z", 0.01, 0.0, n)
     vals1 = ring_ex(x, y, z, "x", 0.01, 0.9, n)
-    vals2 = rot_ring(vals0, 90, 0, n)
-    vals3 = rot_ring(vals0, 0, 90, n)
-    vals = vals0 .+ vals1 .+ vals2 .+ vals3
+    vals1r = rot_ring(vals1, 80, 0, n)
+    vals = vals0 .+ vals1 .+ vals1r
     surface(x, y, z, fill_z=vals, size=(600, 600))
 elseif set == 1
     vals = ring_ex(x, y, z, "z", 0.01, 0.0, n)
